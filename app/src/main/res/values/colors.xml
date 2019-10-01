@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@android:color/white</color>
+    <color name="colorPrimaryDark">@android:color/white</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="bottom_nav_view_checked_color">#3f51b5</color>
+    <color name="bottom_nav_view_unchecked_color">#616161</color>
+    <color name="toolbar_text_color">#283593</color>
+    <color name="rating_bar_color">#fdd835</color>
+    <color name="light_black">#4D000000</color>
+</resources>
