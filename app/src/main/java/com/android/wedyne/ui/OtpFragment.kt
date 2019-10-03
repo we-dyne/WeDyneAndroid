@@ -14,6 +14,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.android.wedyne.R
 import com.android.wedyne.databinding.FragmentOtpBinding
 import com.android.wedyne.utils.setupBackground
@@ -29,6 +30,7 @@ class OtpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_otp, container, false)
+        NavigationUI.setupWithNavController(binding.toolbar,findNavController())
         init()
 
 
