@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">WeDyne</string>
+    <string name="home">Home</string>
+    <string name="offers">Offers</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="filter">Filter</string>
+    <string name="add">Add</string>
+
+    <string name="accept_terms">By creating this account you accept terms and conditions</string>
+    <string name="hint_full_name">Enter Your Full Name</string>
+    <string name="hint_email">Enter Email ID</string>
+    <string name="hint_password">Enter Password</string>
+    <string name="create_account">create account</string>
+    <string name="create_account_long_text">Create an account with the new phone number</string>
+    <string name="_10_digit_mobile_number">10 Digit mobile number</string>
+    <string name="i_have_referral_code">I have referral code</string>
+    <string name="enter_otp">enter otp</string>
+    <string name="verify_number">verify number</string>
+    <string name="login">login</string>
+    <string name="wedyne">WeDyne</string>
+    <string name="welcome_to">Welcome to</string>
+</resources>

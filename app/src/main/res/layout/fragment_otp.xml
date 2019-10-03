@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.OtpFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/creme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/margin_guideline" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/margin_guideline" />
+
+        <ImageView
+            android:id="@+id/image_background"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:srcCompat="@color/creme" />
+
+        <TextView
+            android:id="@+id/text_verify_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="40dp"
+            android:text="@string/verify_number"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/icon_otp"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/text_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="36dp"
+            android:text="OTP sent to 9549924343"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/icon_otp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/text_verify_number" />
+
+        <ImageView
+            android:id="@+id/icon_otp"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="38dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:srcCompat="@drawable/ic_otp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <com.android.wedyne.utils.PinEntryEditText
+            android:id="@+id/edit_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:cursorVisible="false"
+            android:digits="1234567890"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_enter_otp"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Custom"
+            android:layout_width="0dp"
+            android:layout_marginBottom="8dp"
+            tools:backgroundTint="@color/colorAccent"
+            android:text="@string/enter_otp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:background="?selectableItemBackground"
+        android:layout_toStartOf="@+id/offersOption"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/homeToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_expand_more"
+            android:text="@string/home"
+            android:textColor="@color/toolbar_text_color"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/userLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="31 A, RK Flats, near Vasushisti Mall,sdjvksnjkvbfkjb "
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/offersOption"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/offers"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:layout_marginStart="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:focusable="true" />
+
+</RelativeLayout>

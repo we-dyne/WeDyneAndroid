@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- RatingBar Style-->
+    <style name="RatingBar" parent="android:Widget.Material.RatingBar.Small">
+        <item name="android:colorControlNormal">@color/rating_bar_color</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.UnelevatedButton.Custom">
+        <item name="cornerRadius">0dp</item>
+        <item name="android:layout_height">56dp</item>
+
+    </style>
+
+    <style name="Base.Widget.MaterialComponents.TextInputEditText.customStyle">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+</resources>

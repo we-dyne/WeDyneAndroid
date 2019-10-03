@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.SignUpFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/margin_guideline" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/margin_guideline" />
+
+        <TextView
+            android:id="@+id/welcome_to_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large_1"
+            android:text="@string/welcome_to"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/we_dyne_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/wedyne"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_to_text" />
+
+        <TextView
+            android:id="@+id/text_create_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large_2"
+            android:text="create account"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/we_dyne_text" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small_1"
+            android:paddingTop="0dp"
+            app:boxBackgroundColor="@color/design_default_color_background"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toTopOf="@+id/layout_email"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/text_create_account">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_name"
+                style="@style/Base.Widget.MaterialComponents.TextInputEditText.customStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:hint="@string/hint_full_name"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_email"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/design_default_color_background"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/layout_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_email"
+                style="@style/Base.Widget.MaterialComponents.TextInputEditText.customStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_password"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/design_default_color_background"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/layout_email"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_password"
+                style="@style/Base.Widget.MaterialComponents.TextInputEditText.customStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="text_agreement,button_create_account"
+            tools:layout_editor_absoluteY="699dp" />
+
+        <TextView
+            android:id="@+id/text_agreement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small_1"
+            android:gravity="center"
+            android:text="@string/accept_terms"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start" />
+
+        <Button
+            android:id="@+id/button_create_account"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Custom"
+            android:layout_width="0dp"
+            android:layout_marginBottom="4dp"
+            tools:backgroundTint="@color/colorAccent"
+            android:text="@string/create_account"
+            app:layout_constraintBottom_toTopOf="@+id/text_agreement"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
